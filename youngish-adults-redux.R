@@ -168,6 +168,17 @@ vis_01_11 <- ggplot() +
     family = "National 2 Custom",
     fontface = "bold"
   ) +
+  annotate(
+    geom = "text",
+    x = map_centre_pt[[1, "X"]] - 7000,
+    y = map_centre_pt[[1, "Y"]] - 25000,
+    label = "Map by Aaron Schiff (CC-BY 4.0)\nData from Stats NZ",
+    hjust = 0,
+    colour = "black",
+    family = "National 2 Custom",
+    fontface = "italic",
+    size = 2
+  ) +
   scale_x_continuous(expand = expansion(0, 0)) +
   scale_y_continuous(expand = expansion(0, 0)) +
   scale_colour_manual(
@@ -230,6 +241,17 @@ vis_11_21 <- ggplot() +
     colour = "#491d8b",
     family = "National 2 Custom",
     fontface = "bold"
+  ) +
+  annotate(
+    geom = "text",
+    x = map_centre_pt[[1, "X"]] - 7000,
+    y = map_centre_pt[[1, "Y"]] - 25000,
+    label = "Map by Aaron Schiff (CC-BY 4.0)\nData from Stats NZ",
+    hjust = 0,
+    colour = "black",
+    family = "National 2 Custom",
+    fontface = "italic",
+    size = 2
   ) +
   scale_x_continuous(expand = expansion(0, 0)) +
   scale_y_continuous(expand = expansion(0, 0)) +
