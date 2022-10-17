@@ -109,6 +109,13 @@ dat_combined <- dat_sa2_2021 |>
   filter(!str_detect(string = sa22021_2, pattern = "Oceanic")) |>
   filter(!st_is_empty(geometry))
 
+# Calculate total population changes by decade
+dat_combined |>
+  st_drop_geometry() |>
+  group_by(period) |>
+  summarise(value = sum(value)) |>
+  ungroup()
+
 # Generate random dots inside SA2 areas for visualisation
 dat_vis <- dat_combined |>
   nest_by(period, sign) |>
